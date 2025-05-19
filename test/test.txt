@@ -1,0 +1,67 @@
+# Basic Built-in Commands
+
+$ pwd
+/home/user
+
+$ cd /
+$ pwd
+/
+
+$ cd nonexistent
+cd: nonexistent: No such file or directory
+
+$ exit
+# Exits the shell
+
+---
+
+# Echo and Quoting Tests
+
+$ echo Hello World
+Hello World
+
+$ echo "Hello   spaced   World"
+Hello   spaced   World
+
+$ echo 'single quoted with $HOME and \ slashes'
+single quoted with $HOME and \ slashes
+
+$ echo "double quoted with \$HOME is $HOME"
+double quoted with $HOME is /home/user
+
+$ echo "\"quoted\" 'text'"
+"quoted" 'text'
+
+---
+
+# Multiline Input
+
+$ echo one \
+> two \
+> three
+one two three
+
+---
+
+# External Commands
+
+$ ls /bin | grep sh
+bash
+dash
+sh
+
+$ type echo
+echo is a shell builtin
+
+$ type ls
+ls is /bin/ls
+
+---
+
+# Error Cases
+
+$ notacommand
+notacommand: command not found
+
+$ echo "unterminated
+# Should show syntax error or wait for closing quote
