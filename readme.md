@@ -17,17 +17,58 @@ A minimal shell-like program written in C++, supporting basic built-in commands 
 - 🧠 **Smart Quoting** and escaping behavior similar to traditional UNIX shells
 - 🧰 **External Command Execution** via `$PATH` lookup
 
----
-
-## 🛠️ Build Instructions
-
 ### Prerequisites
 
 - C++17 (or later) compatible compiler (e.g., `g++`, `clang++`)
-- `make` (optional, if using a Makefile)
 
-### Compile with `g++`
+---
+## 🛠️ Build Instructions
+
+### 🔧 Building with Makefile
+
+##### ✅ To build the project:
+
+```bash
+make
+```
+##### ▶️ To run the shell:
+```
+./shell
+```
+##### 🧹 To clean the compiled files:
+```bash
+make clean
+```
+
+
+
+### 🔨 Compile Manually with `g++`
 
 ```bash
 g++ -std=c++17 -o my_shell src/main.cpp
-./my_shell
+./shell
+```
+---
+## 💻 Example Usage
+
+```bash
+$ echo Hello, world!
+Hello, world!
+
+$ pwd
+/home/user
+
+$ cd /tmp
+$ pwd
+/tmp
+
+$ type echo
+echo is a shell builtin
+
+$ type ls
+ls is /bin/ls
+
+$ ./nonexistent
+./nonexistent: command not found
+
+```
