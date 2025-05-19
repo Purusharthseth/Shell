@@ -1,59 +1,33 @@
 # 🐚 Custom Shell in C++
 
-A minimal shell implementation in C++ supporting basic built-in commands like `cd`, `echo`, `type`, `exit`, and `pwd`, along with the ability to execute external commands using `PATH`.
+A minimal shell-like program written in C++, supporting basic built-in commands like `cd`, `echo`, `type`, `exit`, and `pwd`, with additional support for executing external commands found in the system's `$PATH`.
+
+---
 
 ## 🚀 Features
 
-- Built-in commands:
-  - `echo`
-  - `type`
-  - `cd`
-  - `pwd`
-  - `exit`
-- Support for multi-line input using `\`
-- Quoting and escaping similar to typical UNIX shells
-- Execution of external commands via `$PATH`
+- ✅ **Built-in Commands**:
+  - `echo` — Print arguments to standard output
+  - `type` — Identify whether a command is built-in or external
+  - `cd` — Change the current working directory
+  - `pwd` — Print the current working directory
+  - `exit` — Exit the shell
+
+- 🔁 **Multi-line Input** using backslash (`\`) continuation
+- 🧠 **Smart Quoting** and escaping behavior similar to traditional UNIX shells
+- 🧰 **External Command Execution** via `$PATH` lookup
+
+---
 
 ## 🛠️ Build Instructions
 
 ### Prerequisites
-- A C++17 or later compiler
 
-### Using `g++`
+- C++17 (or later) compatible compiler (e.g., `g++`, `clang++`)
+- `make` (optional, if using a Makefile)
+
+### Compile with `g++`
+
 ```bash
 g++ -std=c++17 -o my_shell src/main.cpp
 ./my_shell
-
-💻 Usage
-Once compiled, you can use it like a shell:
-
-sh
-Copy
-Edit
-$ echo Hello, world!
-Hello, world!
-
-$ pwd
-/home/user
-
-$ cd /tmp
-$ pwd
-/tmp
-
-$ type echo
-echo is a shell builtin
-
-$ type ls
-ls is /bin/ls
-
-$ ./nonexistent
-./nonexistent: command not found
-
-Supports multi-line input:
-
-sh
-Copy
-Edit
-$ echo Hello \
-> world
-Hello world
