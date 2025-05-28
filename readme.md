@@ -16,6 +16,7 @@ A minimal shell-like program written in C++, supporting basic built-in commands 
 - 🔁 **Multi-line Input** using backslash (`\`) continuation
 - 🧠 **Smart Quoting** and escaping behavior similar to traditional UNIX shells
 - 🧰 **External Command Execution** via `$PATH` lookup
+- 📤 **I/O Redirection with support** for `>`, `<,` and `>>` using low-level system calls
 
 ### Prerequisites
 

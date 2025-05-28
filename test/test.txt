@@ -57,6 +57,22 @@ $ type ls
 ls is /bin/ls
 
 ---
+# I/O Redirection
+
+
+$ echo "hello file" > test.txt
+$ cat test.txt
+hello file
+
+$ echo "appending" >> test.txt
+$ cat test.txt
+hello file
+hello file
+
+$ cd /fakepath 2>> cd_errors.log
+# Appends:
+# cd: /fakepath: No such file or directory
+---
 
 # Error Cases
 
